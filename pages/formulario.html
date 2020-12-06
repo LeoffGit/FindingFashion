@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formulario de contacto</title>
+
+    <link rel="stylesheet" href="../css/estilosRegistro.css">
+    <link rel="stylesheet" href="../css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="../fonts/Leixo.ttf">
+
+    <script src="../js/jquery-3.2.1.js"></script>
+    <script src="../js/script.js"></script>
+</head>
+<body>
+
+    <section class="form_wrap">
+
+        <section class="cantact_info">
+            <section class="info_title">
+                <span class="fa fa-user-circle"></span>
+                <h2>REGISTRATE EN<br>LEARNING SEWING DESING</h2>
+            </section>
+            <section class="info_items">
+                <p><span class="fa fa-envelope"></span> academiatfg.contacto@gmail.com</p>
+                <p><span class="fa fa-mobile"></span> + 64 999999999 </p>
+            </section>
+        </section>
+
+        <form action="/TFG/PHP/registro.php" class="form_contact" method="POST">
+            <h2>Registrate</h2>
+            <div class="user_info">
+                <label for="names">Nombre</label>
+                <input type="text" id="names" name="nombre">
+
+                <label for="phone">Email</label>
+                <input type="text" id="phone" name="email">
+
+                <label for="email">Contraseña</label>
+                <input type="password" id="contraseña" name="contrasena">
+
+                <label for="mensaje">Estudios</label>
+                <input id="text" name="estudios">
+
+                <input type="submit" value="Registrarse" id="btnSend" name="registro">
+            </div>
+        </form>
+
+    </section>
+
+</body>
+</html>

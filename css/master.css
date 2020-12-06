@@ -1,0 +1,186 @@
+body {
+  background: rgb(236, 236, 123);
+}
+
+#barra {
+  background-color: black;
+  height: 8em;
+  margin-bottom: 2%;
+  width: 100%;
+  margin-left: 0px;
+}
+nav {
+  margin-bottom: 2%;
+  background-color: black;
+}
+.navbar-brand img {
+  height: 7em;
+}
+#contenido {
+  width: 100%;
+}
+.icono img {
+  height: 8em;
+}
+.centrarImagen{
+    text-align: center;
+    display:block;
+    margin:auto;
+}
+
+#titulo {
+  color: white;
+  font-size: 200%;
+  font-family: Leixo;
+}
+
+#rowProfesor{
+    height: 25em;
+}
+
+.card-img-top {
+  text-align: center;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: 100% auto;
+}
+
+#saludo {
+  text-align: center;
+}
+
+.page-container{
+   min-height:100%;
+   position:relative;
+   margin:0px;
+
+}
+.botomito {
+  margin-top: 2%;
+
+
+  background: rgba(0, 0, 0, 1);
+  background: -moz-linear-gradient(
+    left,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(212, 186, 82, 1) 29%,
+    rgba(240, 218, 105, 1) 54%,
+    rgba(236, 236, 123, 1) 76%,
+    rgba(235, 239, 123, 1) 100%
+  );
+  background: -webkit-gradient(
+    left top,
+    right top,
+    color-stop(0%, rgba(0, 0, 0, 1)),
+    color-stop(29%, rgba(212, 186, 82, 1)),
+    color-stop(54%, rgba(240, 218, 105, 1)),
+    color-stop(76%, rgba(236, 236, 123, 1)),
+    color-stop(100%, rgba(235, 239, 123, 1))
+  );
+  background: -webkit-linear-gradient(
+    left,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(212, 186, 82, 1) 29%,
+    rgba(240, 218, 105, 1) 54%,
+    rgba(236, 236, 123, 1) 76%,
+    rgba(235, 239, 123, 1) 100%
+  );
+  background: -o-linear-gradient(
+    left,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(212, 186, 82, 1) 29%,
+    rgba(240, 218, 105, 1) 54%,
+    rgba(236, 236, 123, 1) 76%,
+    rgba(235, 239, 123, 1) 100%
+  );
+  background: -ms-linear-gradient(
+    left,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(212, 186, 82, 1) 29%,
+    rgba(240, 218, 105, 1) 54%,
+    rgba(236, 236, 123, 1) 76%,
+    rgba(235, 239, 123, 1) 100%
+  );
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(212, 186, 82, 1) 29%,
+    rgba(240, 218, 105, 1) 54%,
+    rgba(236, 236, 123, 1) 76%,
+    rgba(235, 239, 123, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#ebef7b', GradientType=1);
+}
+
+#boton {
+  border-radius: 0.5em;
+  width: 8em;
+  height: 2.5em;
+  color: white;
+  background-color: black;
+  margin-left: auto;
+  margin-right: 7%;
+  border-color: rgb(236, 236, 123);
+}
+.boton2{
+  border-radius: 0.5em;
+  width: 8em;
+  height: 2.5em;
+  color: white;
+  background-color: black;
+  margin-left: auto;
+  margin-right: 7%;
+  border-color: rgb(236, 236, 123);
+}
+
+@font-face {
+  font-family: Leixo;
+  src: url(../fonts/Leixo.ttf);
+}
+a:link{
+  color:white;
+}
+a:hover{
+  color:white;
+
+}
+a:visited{
+  color:grey;
+
+}
+.card {
+  background-color: black;
+  color: white;
+}
+
+.boton-cards {
+  border-radius: 0.4em;
+  width: 100%;
+  height: 3em;
+  color: black;
+  background-color: rgb(236, 236, 123);
+  border-color: black;
+  font-size: 1.2em;
+  margin-left: auto;
+}
+
+.rrss a {
+  display: inline;
+}
+
+.modal-content {
+  color: black;
+  background-color: rgb(236, 236, 123);
+  border-color: white;
+  font-size: 1.2em;
+}
+
+.jumbotron {
+  background-color: black;
+}
+
+.ulita {
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
+  column-count: 3;
+}
