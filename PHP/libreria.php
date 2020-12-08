@@ -31,6 +31,9 @@ require("funcionconection.php");
       $usuario=$_SESSION['nombre'] ;
         echo "Bienvenido $usuario";
     }
+    function raizdocumento(){
+      echo "http://localhost/TFG";
+    }
 
     /*las rutas de los header estan en raiz
     al hacer include de la pag da error: cannot redeclare header
@@ -48,7 +51,7 @@ require("funcionconection.php");
                 include "$documento/TFG/cabeceras/headerProfesor.php";
                 break;
             default:
-                include "$documento/TFG/cabeceras/header.php";
+                include "$documento/TFG/cabeceras/header2.php";
            }
     }
 

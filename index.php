@@ -7,89 +7,121 @@ if(isset($_POST['logmail'])){
 }
 
  ?>
- <!doctype html>
 
- <html lang="en">
-
- <head>
-
-   <!-- Required meta tags -->
-
-   <meta charset="utf-8">
-
-   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-   <!-- Bootstrap CSS -->
-
-   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-   <link rel="stylesheet" href="css/font-awesome.css">
-   <link rel="stylesheet" type="text-css" href="css/bootstrap-social.scss">
-   <link rel="stylesheet" href="css/master.css">
-   <style media="screen">
-     .botomito{
-       position: fixed;
-       bottom: 0;
-     }
-   </style>
-   <title>TFG</title>
-
- </head>
-    <body>
-        
-      <?php headerito(); ?>
-
-        <div class="row" id="contenido">
-            <div class="col-sm-3">
-                <div class="card">
-                    <img src="images/cursos/Patronaje/carrusel3.jpg" class="card-img-top" alt="foto">
-                    <div class="card-body">
-                        <h5 class="card-title">Patronaje</h5>
-                        <p class="card-text">Si te apasiona el mundo de la moda el ciclo de Patronaje y moda es el apropiado para tí. Controla todo el proceso creativo para poder confeccionar colecciones, desde el diseño de las prendas.</p>
-                        <a href="pages/Cursos/Patronaje/Principal.php"><button class="boton-cards">Ir al curso</button></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm-3">
-                <div class="card">
-                    <img src="images/cursos/Patronaje/diseño.jpg" class="card-img-top" alt="foto">
-                    <div class="card-body">
-                        <h5 class="card-title">Diseño de moda</h5>
-                        <p class="card-text">El curso de Diseño de Moda sigue un hilo conductor progresivo a partir del concepto “diseño”, que permitirá aprender a seleccionar y trabajar el tejido más adecuado para cada diseño.</p>
-                        <a href="pages/Cursos/Diseno/Principal.php"><button class="boton-cards">Ir al curso</button></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-3">
-                <div class="card">
-                    <img src="images/cursos/CorteYConfeccion/carrusel1.jpg" class="card-img-top" alt="foto">
-                    <div class="card-body">
-                        <h5 class="card-title">Corte y Confección</h5>
-                        <p class="card-text">Dentro de la parte de confección, manejarás las diferentes técnicas de puntadas a mano y a máquina y aprenderás los diferentes métodos de corte y colocación del patrón sobre el tejido.</p>
-                        <a href="pages/Cursos/CorteYConfeccion/Principal.php"><button class="boton-cards">Ir al curso</button></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-3">
-                <div class="card">
-                    <img src="images/cursos/Modelaje/carrusel2.jpg" class="card-img-top" alt="foto">
-                    <div class="card-body">
-                        <h5 class="card-title">Modelaje</h5>
-                        <p class="card-text">El modelaje (o moulage) es una técnica de diseño de moda que permite construir la prenda directamente sobre el cuerpo de la persona o sobre un maniquí para posteriormente obtener un patrón.</p>
-                        <a href="pages/Cursos/Modelaje/Principal.php"><button class="boton-cards">Ir al curso</button></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    <!-- Footer -->
-    <?php footer(); ?>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>AuthForm</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="<?php raizdocumento(); ?>/css/styleindex.css">
+  <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
+</head>
+<body>
+ <section>
+        <div class="circle">
+        </div>  
+        <?php headerito();?>
 
 
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+     <div class="content">
+         <div class="textBox">
+             <h2> No es solo moda es <br> <span>Finding Fashion</span></h2>
+             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras varius urna a orci rutrum elementum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nunc ex leo, aliquet eget quam in, congue commodo ante. Praesent ut interdum justo. Praesent ultricies elementum eros, eget luctus erat tempus quis. Sed ante sem, commodo vel lorem id, aliquam interdum ex. Mauris aliquet quis tellus id scelerisque. Nullam in sem sit amet purus lacinia suscipit a vitae nisi. Quisque ornare augue ut nisl venenatis gravida.</p>
+             <a href="#" onmouseover="imgSlider('images/coserhandsdef.jpg'); changeCircleColor('#FFD359');changeDescription(1)">Learn More</a>
+             <a href="#" onmouseover="imgSlider('images/diseñodef.jpg'); changeCircleColor('#FFDC7D');changeDescription(2)">Learn More</a>
+             <a href="#" onmouseover="imgSlider('images/patronaje2def.jpg'); changeCircleColor('#F9C537');changeDescription(3)">Learn More</a>
+             <a href="#" onmouseover="imgSlider('images/modelaje2maybe2def.jpg'); changeCircleColor('#FFD359');changeDescription(4)">Learn More</a>
+         </div>
+         <div class="imgBox">
+            <img src="coserhandsdef.jpg" class="starbucks" height="250">
+            <p id="descripcion">Si te apasiona el mundo de la moda el ciclo de Patronaje y moda es el apropiado para tí. Controla todo el proceso creativo para poder confeccionar colecciones, desde el diseño de las prendas.
+            </p>
+            
+         </div>
+     </div>
+     
+     <ul class="sci">
+         <li>
+            <a href="#" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+         </li>
+         <li>
+            <a href="#" class="social-icon">
+                <i class="fab fa-twitter"></i>
+              </a>
+         </li>
+         <li>
+            <a href="#" class="social-icon">
+                <i class="fab fa-instagram"></i>
+              </a>
+         </li>
+         <li>
+            <a href="#" class="social-icon">
+                <i class="fab fa-discord"></i>
+              </a>
+         </li>
 
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+      </ul>
+     
+ </section>
+ <script type ="text/javascript">
+    function imgSlider(anything){
+        document.querySelector('.starbucks').src= anything;
+    }
+    function changeCircleColor(color){
+        const circle = document.querySelector('.circle');
+        circle.style.background = color;
+    }
+    function changeDescription(number){
 
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        switch (number) {
+            case 1:
+            
+                document.getElementById("descripcion").classList.add("fade");
+                document.getElementById("descripcion").innerHTML="texto1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras varius urna a orci rutrum elementum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nunc ex leo, aliquet eget quam in, congue commodo ante. Praesent ut interdum justo. Praesent ultricies elementum eros, eget luctus erat tempus quis. Sed ante sem, commodo vel lorem id, aliquam interdum ex. Mauris aliquet quis tellus id scelerisque. Nullam in sem sit amet purus lacinia suscipit a vitae nisi. Quisque ornare augue ut nisl venenatis gravida." ;
+                setTimeout(() => { document.getElementById("descripcion").classList.remove("fade"); }, 500);
+                
+
+            break;
+
+            case 2:
+            
+            document.getElementById("descripcion").classList.add("fade");
+            document.getElementById("descripcion").innerHTML= "texto2 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras varius urna a orci rutrum elementum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nunc ex leo, aliquet eget quam in, congue commodo ante. Praesent ut interdum justo. Praesent ultricies elementum eros, eget luctus erat tempus quis. Sed ante sem, commodo vel lorem id, aliquam interdum ex. Mauris aliquet quis tellus id scelerisque. Nullam in sem sit amet purus lacinia suscipit a vitae nisi. Quisque ornare augue ut nisl venenatis gravida." ;
+            setTimeout(() => { document.getElementById("descripcion").classList.remove("fade"); }, 500);
+            
+
+            break;
+
+            case 3:
+            
+            document.getElementById("descripcion").classList.add("fade");
+            document.getElementById("descripcion").innerHTML= "texto tresito Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras varius urna a orci rutrum elementum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nunc ex leo, aliquet eget quam in, congue commodo ante. Praesent ut interdum justo. Praesent ultricies elementum eros, eget luctus erat tempus quis. Sed ante sem, commodo vel lorem id, aliquam interdum ex. Mauris aliquet quis tellus id scelerisque. Nullam in sem sit amet purus lacinia suscipit a vitae nisi. Quisque ornare augue ut nisl venenatis gravida." ;
+            setTimeout(() => { document.getElementById("descripcion").classList.remove("fade"); }, 500);
+            break;
+
+            case 4:
+            
+            document.getElementById("descripcion").classList.add("fade");
+            document.getElementById("descripcion").innerHTML= "texto 4 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras varius urna a orci rutrum elementum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nunc ex leo, aliquet eget quam in, congue commodo ante. Praesent ut interdum justo. Praesent ultricies elementum eros, eget luctus erat tempus quis. Sed ante sem, commodo vel lorem id, aliquam interdum ex. Mauris aliquet quis tellus id scelerisque. Nullam in sem sit amet purus lacinia suscipit a vitae nisi. Quisque ornare augue ut nisl venenatis gravida." ;
+            setTimeout(() => { document.getElementById("descripcion").classList.remove("fade"); }, 500);
+            break;                
+
+            default:
+            
+            document.getElementById("descripcion").classList.add("fade");
+            document.getElementById("descripcion").innerHTML= "default Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras varius urna a orci rutrum elementum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nunc ex leo, aliquet eget quam in, congue commodo ante. Praesent ut interdum justo. Praesent ultricies elementum eros, eget luctus erat tempus quis. Sed ante sem, commodo vel lorem id, aliquam interdum ex. Mauris aliquet quis tellus id scelerisque. Nullam in sem sit amet purus lacinia suscipit a vitae nisi. Quisque ornare augue ut nisl venenatis gravida." ;
+            setTimeout(() => { document.getElementById("descripcion").classList.remove("fade"); }, 500);
+            break;
+        }
+    }
+</script>
+</body>
+</html>
