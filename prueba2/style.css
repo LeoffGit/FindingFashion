@@ -1,0 +1,303 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+section{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding:100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+}
+
+.container{
+    position: relative;
+    width: 900px; 
+    display: flex;
+    justify-content: center;
+    margin-top: 311px;
+    margin-right: 612px;
+}
+header{
+    position:absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    padding:20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header.logo{
+    position: relative;
+    max-width: 80px;
+}
+header ul{
+    position: relative;
+    display: flex;
+}
+header ul li{
+    list-style: none;
+}
+ header ul li a{
+     display: inline-block;
+     color:#333;
+     font-weight:400;
+     margin-left: 40px;
+     text-decoration: none;
+ }
+
+.textBox{
+    position: absolute;
+    margin-top: -360px;
+}
+.textBox  h2{
+   color:#333;
+   font-size: 3em;
+   line-height: 1.4em;
+   font-weight: 500;
+}
+.textBox  h2 span{
+   color:#333;
+   font-size: 0.5em;
+   font-weight: 900;
+}
+.container .card{
+    position: relative;
+    margin-left: 30px;
+    width: 250px;
+    background: linear-gradient(0deg,#1b1b1b,#222,#1b1b1b);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    border-radius: 4px;
+    text-align: center;
+    overflow: hidden;
+    transition:0.5s;
+}
+.container .card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgb(0,0,0,.5);
+}
+.container .card:before{
+    content:'';
+    position:absolute;
+    top:0;
+    left: -50%;
+    width: 100%;
+    height: 100%;
+    background:rgba(255,255,255,.03);
+    pointer-events:none;
+    z-index:1;
+}
+.container .card a{
+
+    display: inline-block;
+    margin-top:20px;
+    padding: 8px 20px;
+    background: #cecb28;
+    color:#fff;
+    border-radius:40px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+.percent{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: inset 0 0 50px #000;
+    background:#222;
+    z-index: 1000;
+
+}
+.percent .number{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+.percent .number h2{
+    color:#777;
+    font-weight: 700;
+    font-size: 40px;
+    transition: 0.5s;
+}
+.card:hover .percent .number h2{
+    color:#fff;
+    font-size: 60px;
+    transition: 0.5s;
+}
+.percent .number h2 span{
+    font-size: 24px;
+    color:#777;
+}
+.card:hover .percent .number h2 span{
+    color:#fff;
+}
+.text{
+    position: relative;
+    color:#777;
+    margin-top:20px;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+.card:hover .text{
+    color:#fff;
+}
+svg{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    z-index: 1000;
+}
+svg circle{
+    width: 100%;
+    height: 100%;
+    fill:none;
+    stroke: #191919;
+    stroke-width: 10;
+    stroke-linecap: round;
+    transform: translate(5px,5px);
+}
+svg circle:nth-child(2){
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+}
+.card:nth-child(1) svg circle:nth-child(2){
+    stroke-dashoffset: calc(440 - (440*90) /100);
+    stroke:#cecb28;
+}
+.circulo{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background:#cecb28;
+    clip-path: circle(600px at right 800px);
+}
+
+@media only screen and (max-width: 1025px ) and (min-width: 550px){
+    header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 20px 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    header ul li a {
+        display: inline-block;
+        color: #333;
+        font-weight: 400;
+        margin-left: 40px;
+        text-decoration: none;
+        font-size: 2em;
+    }
+    .textBox {
+        position: absolute;
+        margin-top: -870px;
+    }
+    .container {
+        position: relative;
+        width: 80%;
+        display: inline-block;
+        justify-content: center;
+        margin-top: 311px;
+        margin-right: 6%;
+        padding: 0px;
+    }
+    .container .card {
+        position: relative;
+        width: 100%;
+        margin-left: 30px;
+        background: linear-gradient(0deg,#1b1b1b,#222,#1b1b1b);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 300px;
+        border-radius: 4px;
+        text-align: center;
+        transition: 0.5s;
+        margin-bottom: 5%;
+    }
+}
+@media only screen and (max-width: 500px ) {
+
+    .circulo {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 135%;
+        height: 220%;
+        background: #cecb28;
+        clip-path: circle(600px at right 800px);
+    }
+    header {
+        position: absolute;
+        top: 0;
+        left: -180px;
+        width: 100%;
+        padding: 20px 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    header ul li a {
+        display: inline-block;
+        color: #333;
+        font-weight: 400;
+        margin-left: 40px;
+        text-decoration: none;
+        font-size: 1.3em;
+    }
+    .textBox {
+        position: absolute;
+        margin-top: -180px;
+    }
+    .textBox h2 {
+        color: #333;
+        font-size: 2em;
+        line-height: 1.4em;
+        font-weight: 500;
+        margin-top: -430px;
+        visibility: hidden;
+    }
+    .container {
+        position: relative;
+        width: 900px;
+        justify-content: center;
+        margin-top: 130px;
+        margin-left: -40px;
+        flex-direction: column;
+    }
+    .container .card {
+        position: relative;
+        margin-bottom: 20px;
+        width: 250px;
+        background: linear-gradient(0deg,#1b1b1b,#222,#1b1b1b);
+        justify-content: center;
+        align-items: center;
+        height: 300px;
+        border-radius: 4px;
+        text-align: center;
+        overflow: hidden;
+        transition: 0.5s;
+    }
+}
