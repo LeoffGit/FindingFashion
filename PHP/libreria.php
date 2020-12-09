@@ -29,7 +29,7 @@ require("funcionconection.php");
 
     function saludarusuario(){
       $usuario=$_SESSION['nombre'] ;
-        echo "Bienvenido $usuario";
+        echo "$usuario";
     }
     function raizdocumento(){
       echo "http://localhost/TFG";
@@ -45,10 +45,10 @@ require("funcionconection.php");
       }
         switch ($_SESSION['tipouser']) {
             case '1':
-                include "$documento/TFG/cabeceras/headerAlumno.php";
+                include "$documento/TFG/cabeceras/header2alumno.php";
                 break;
             case '2':
-                include "$documento/TFG/cabeceras/headerProfesor.php";
+                include "$documento/TFG/cabeceras/header2profesor.php";
                 break;
             default:
                 include "$documento/TFG/cabeceras/header2.php";

@@ -42,9 +42,11 @@ $foto=getfotocurso($_SESSION['idpagina']);
 
  <body>
    <?php headerito($_SESSION['tipouser']); ?>
-    <div class="container" id="contenido">
+   <div class="circle">
+        </div>  
+    <div class="container-fluid" id="contenido">
       <div class="row">
-        <div class="col-sm-8">
+        <div class="col-sm-6">
           <div class="row">
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
               <ol class="carousel-indicators">
@@ -75,7 +77,7 @@ $foto=getfotocurso($_SESSION['idpagina']);
             <p></p>
           </div>
           <div class="row">
-            <div class="jumbotron text-white shadow ">
+            <div class="jumbotron">
               <h2 class="display-5">Requisitos</h2>
               <ul class="ulita">
                 <li>No requiere ningun conocimiento previo sobre el mundo textil</li>
@@ -95,15 +97,15 @@ $foto=getfotocurso($_SESSION['idpagina']);
             </div>
           </div>
           <div class="row">
-            <div class="col-sm-12  ">
+            <div class="col-sm-12">
               <h2 class="display-5">Contenido del curso</h2>
-              <ul class="list-group  text-white">
-                <li class="list-group-item bg-dark">Video 1 :titulo del video</li>
-                <li class="list-group-item bg-dark">Tarea 1 :nombre de la tarea</li>
-                <li class="list-group-item bg-dark">Video 2 :titulo del video</li>
-                <li class="list-group-item bg-dark">Tarea 2 :nombre de la tarea</li>
-                <li class="list-group-item bg-dark">Video 3 :titulo del video</li>
-                <li class="list-group-item bg-dark">Tarea 3 :nombre de la tarea</li>
+              <ul class="list-group">
+                <li class="list-group-item ">Video 1 :titulo del video</li>
+                <li class="list-group-item ">Tarea 1 :nombre de la tarea</li>
+                <li class="list-group-item ">Video 2 :titulo del video</li>
+                <li class="list-group-item ">Tarea 2 :nombre de la tarea</li>
+                <li class="list-group-item ">Video 3 :titulo del video</li>
+                <li class="list-group-item ">Tarea 3 :nombre de la tarea</li>
               </ul>
             </div>
           </div>
@@ -148,9 +150,11 @@ $foto=getfotocurso($_SESSION['idpagina']);
 
           </div>
         </div>
+        <div class="col-sm-2"></div>
         <div class="col-sm-4">
-          <div class="card shadow sticky-top">
+          <div class="card sticky-top">
             <img src="../../../images/cursos/<?php echo $foto; ?>/carrusel1.jpg" class="card-img-top " alt="foto">
+            <p style=" -webkit-text-stroke-width: 1px;-webkit-text-stroke-color:black;opacity: 0.5;display:inline;color:white; position: absolute;top:17%;left: 50%;transform: translate(-50%, -50%);font-size:2em;font-weight:bold;width:max-content;">Corte y confeccion</p>
             <div class="card-body text-white">
               <form class="" action="" method="post">
                 <?php if(isset($_SESSION['id_usuario'])){ ?>
@@ -180,24 +184,6 @@ $foto=getfotocurso($_SESSION['idpagina']);
       </div>
 
     </div>
-    <div class="botomito" style="background-color: black; color:rgb(97, 96, 96); text-align: center;">
-      &copy;2020-2021 TFG DESARROLLO DE
-      APLICACIONES
-      WEB todos los derechos reservados
-      <div class="rrss">
-        <a class="btn btn-block btn-social btn-twitter">
-          <span class="fa fa-twitter"></span> Siguenos en Twitter
-        </a>
-        <a class="btn btn-block btn-social btn-twitter">
-          <span class="fa fa-facebook"></span> Siguenos en Facebook
-        </a>
-        <a class="btn btn-block btn-social btn-twitter">
-          <span class="fa fa-instagram"></span> Siguenos en instagram
-        </a>
-      </div>
-    </div>
-  </div>
-
   <!-- Optional JavaScript -->
 
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
