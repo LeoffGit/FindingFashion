@@ -154,7 +154,7 @@ $foto=getfotocurso($_SESSION['idpagina']);
         <div class="col-sm-4">
           <div class="card sticky-top">
             <img src="../../../images/cursos/<?php echo $foto; ?>/carrusel1.jpg" class="card-img-top " alt="foto">
-            <p style=" -webkit-text-stroke-width: 1px;-webkit-text-stroke-color:black;opacity: 0.5;display:inline;color:white; position: absolute;top:17%;left: 50%;transform: translate(-50%, -50%);font-size:2em;font-weight:bold;width:max-content;">Corte y confeccion</p>
+            <p class="textonimage">Corte y confeccion</p>
             <div class="card-body text-white">
               <form class="" action="" method="post">
                 <?php if(isset($_SESSION['id_usuario'])){ ?>

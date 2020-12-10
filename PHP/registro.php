@@ -24,9 +24,12 @@
                $resultado2 = mysqli_query($con,$accion2);
         if($resultado2){
             header("Location:/TFG/index.php");
+            echo "El location este no tira2";
         }
         }else{
             echo"Error al ingresar el nuevo usuario";
+            header("Location:/TFG/index.php");
+
         }
         mysqli_close($con);
         ?>

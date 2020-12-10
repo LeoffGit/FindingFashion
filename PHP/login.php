@@ -1,6 +1,7 @@
 <?php
+include "libreria.php";
+print_r($_POST);
 session_start();
-session_destroy();
-$_SESSION['tipouser']=0;
+login();
 header('Location:/TFG/index.php');
  ?>

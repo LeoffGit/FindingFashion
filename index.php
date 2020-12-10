@@ -63,7 +63,7 @@ if(isset($_POST['logmail'])){
               </a>
          </li>
          <li>
-            <a href="#" class="social-icon">
+            <a href="https://discord.gg/5MZXgfGmb4" class="social-icon">
                 <i class="fab fa-discord"></i>
               </a>
          </li>
