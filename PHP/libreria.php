@@ -5,26 +5,28 @@ require("funcionconection.php");
         $email = $_POST['logmail'];
         $contrasena = $_POST['logcontrasena'];
         //$_SESSION['tipouser'] = 0;
-        $query = mysqli_query($conexion,"select * from usuarios WHERE email = '$email'");
-        $contar = mysqli_num_rows($query);
-        if ($contar != 0){
-            $row=mysqli_fetch_array($query);
-                if($email == $row['email'] && password_verify($contrasena, $row['contrasena'])){
-                    $_SESSION['email'] = $email;
-                    $_SESSION['id_usuario'] = $row['idUsuarios'];
-                    $_SESSION['nombre'] = $row['nombre'];
-                    $query2 = mysqli_query($conexion,"select * from alumno WHERE Usuarios_idUsuarios = $row[idUsuarios]");
-                    $contar2 = mysqli_num_rows($query2);
-                        if ($contar2 == 0){
-                            $_SESSION['tipouser']=2;
-                            echo "tipouser2";
-                        }else{
-                            $_SESSION['tipouser']=1;
-                            echo "tipouser1";
+        if ($email&&$contrasena){  
+          $query = mysqli_query($conexion,"select * from usuarios WHERE email = '$email'");
+          $contar = mysqli_num_rows($query);
+          if ($contar != 0){
+              $row=mysqli_fetch_array($query);
+                  if($email == $row['email'] && password_verify($contrasena, $row['contrasena'])){
+                      $_SESSION['email'] = $email;
+                      $_SESSION['id_usuario'] = $row['idUsuarios'];
+                      $_SESSION['nombre'] = $row['nombre'];
+                      $query2 = mysqli_query($conexion,"select * from alumno WHERE Usuarios_idUsuarios = $row[idUsuarios]");
+                      $contar2 = mysqli_num_rows($query2);
+                          if ($contar2 == 0){
+                              $_SESSION['tipouser']=2;
+                              echo "tipouser2";
+                          }else{
+                              $_SESSION['tipouser']=1;
+                              echo "tipouser1";
 
-                        }
-                    }
-            }
+                          }
+                      }
+              }
+        }
             mysqli_close($conexion);
     }
 
@@ -168,7 +170,7 @@ require("funcionconection.php");
         $query = mysqli_query($con,"select * from cursos_adquiridos where Alumno_Usuarios_idUsuarios = $idalumno and curso_idcurso = $idcurso");
         if($contar = mysqli_num_rows($query)){
           mysqli_close($con);
-          echo "<a href='videos.php'><button class='boton-cards' name='Comenzar Curso'>Comenzar Curso</button></a>";
+          echo "<button class='boton-cards' name='Comenzar Curso'><a href='videos.php'>Comenzar Curso</a></button>";
         }
       }
       function cursosRelacionados($idcurso){
@@ -180,7 +182,7 @@ require("funcionconection.php");
               $foto=strtolower($fila[1]);
               $nombre=$fila[0];
               $descripcion=$fila[2];
-                echo"   <div class='col-sm-4'>";
+                echo"   <div class='col-xl-4'>";
                 echo"   <div class='card'>";
                 echo"     <img src='../../../images/index/$foto.jpg' class='card-img-top' alt='foto'>";
                 echo"     <div class='card-body'>";
@@ -192,6 +194,37 @@ require("funcionconection.php");
                 echo" </div>";
           }
         
+        mysqli_close($con);
+      }
+
+      function cursosUsuario($idusuario){
+        $con = conexion("academiatfg");
+        $query1 = mysqli_query($con,"select curso_idcurso from cursos_adquiridos where Alumno_Usuarios_idUsuarios = $idusuario");
+        for ($i=0; $i <mysqli_num_rows($query1); $i++){
+          $fila=mysqli_fetch_row($query1);
+          $cursos[$i]=$fila[0];
+        }
+        for ($i=0; $i <count($cursos) ; $i++) { 
+          $idcurso=$cursos[$i];
+        $query2 = mysqli_query($con,"select nombre, foto, descripcion from curso where idcurso = $idcurso");
+          for ($j=0; $j <mysqli_num_rows($query2); $j++){
+              $fila=mysqli_fetch_row($query2);
+              $ruta="../Cursos/".$fila[1]."/Principal.php";
+              $foto=strtolower($fila[1]);
+              $nombre=$fila[0];
+              $descripcion=$fila[2];
+                echo"   <div class='col-lg-3'>";
+                echo"   <div class='card'>";
+                echo"     <img src='../../images/index/$foto.jpg' class='card-img-top' alt='foto'>";
+                echo"     <div class='card-body'>";
+                echo"       <h5 class='card-title'>$nombre</h5>";
+                echo"       <p class='card-text'>$descripcion</p>";
+                echo"       <a href='$ruta'><button class='boton-cards'>Ir al curso</button></a>";
+                echo"     </div>";
+                echo"   </div>";
+                echo" </div>";
+          }
+        }
         mysqli_close($con);
       }
       

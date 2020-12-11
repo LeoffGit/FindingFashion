@@ -5,8 +5,50 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+a{
+  color: white;
+  text-decoration: none;
+}
+a:hover{
+  text-decoration: none;
+  color: white;
+}
+.avideos{
+  text-decoration: none;
+  color: #333;
+}
+.avideos:hover{
+  text-decoration: none;
+  color: #333;
+
+}
+.avideosrespuesta{
+  margin-top: 20px;
+  padding: 8px 20px;
+  background: #ffdb77;
+  color: #fff;
+  border-radius: 40px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.avideosrespuesta:hover{
+  background-color: #d46c27;
+
+}
+.bodycomentario{
+  margin-left: 10%;
+  margin-bottom: 20px;
+}
+.comentario{
+  padding-bottom: 10%;
+  color: #333;
+}
+
 header {
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
@@ -14,6 +56,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 3;
 }
 header.logo {
   position: relative;
@@ -33,10 +76,10 @@ header ul li a {
   margin-left: 40px;
   text-decoration: none;
 }
-a:hover{
+header ul li a:hover{
   color: #333;
-  text-decoration: none;
 }
+
 .circle {
   position: fixed;
   top: 0;
@@ -47,10 +90,43 @@ a:hover{
   clip-path: circle(800px at right 900px);
 }
 
+.circle2 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #ffd359;
+  clip-path: circle(100% at 50% 190%);
+}
+
+.circle3 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #ffd359;
+  clip-path: circle(800px at left 900px);
+  z-index: -1;
+}
+
 #contenido {
   width: 80%;
   padding-top: 5%;
+
+}
+
+.cursoalumno{
+  margin-left: 5%;
+}
+
+#contenidoVideos {
+  width: 100%;
+  padding-top: 5%;
   margin-top: 5%;
+  margin-left: 0;
+  margin-right: 0;
 
 }
 .icono img {
@@ -72,7 +148,23 @@ a:hover{
     height: 25em;
 }
 
+.carousel, .slide,
+.carousel .carousel-inner,
+.carousel .carousel-item,
+.carousel .carousel-item ,
+.carousel .carousel-control {
+  border-radius: 5%;
+  overflow: hidden;
+}
+.card-header{
+  background-color: #ffffff4f;
+  border: 1px solid #d46c275e;
+  border-collapse: collapse;
+  margin-bottom: 1px;
+
+}
 .card-img-top {
+  border-radius: 5%;
   text-align: center;
   background-repeat: no-repeat;
   background-position: 50%;
@@ -162,8 +254,9 @@ border: 0;
   column-count: 3;
 }
 #carouselExampleIndicators{
--webkit-box-shadow: -10px 25px 14px 6px rgba(0, 0, 0, 0.4);
-box-shadow: -10px 25px 14px 6px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0px 10px 10px 8px rgba(50, 50, 50, 0.5);
+  -moz-box-shadow:    0px 10px 10px 8px rgba(50, 50, 50, 0.5);
+  box-shadow:         0px 10px 10px 8px rgba(50, 50, 50, 0.5);
 }
 .carousel-item {
   height: 100%;
@@ -177,7 +270,7 @@ box-shadow: -10px 25px 14px 6px rgba(0, 0, 0, 0.4);
   top: 7%;
 }
 .list-group-item {
-  background-color: #ffffff36;
+  background-color: #ffffff4f;
   border: 1px solid #d46c275e;
 }
 .headerbtn{
@@ -201,4 +294,39 @@ box-shadow: -10px 25px 14px 6px rgba(0, 0, 0, 0.4);
   font-size:2em;
   font-weight:bold;
   width:max-content;
+}
+.cajacoment{
+  margin-bottom: 20px;
+  
+}
+textarea{
+  width: 100%;
+}
+@media (max-width: 650px) {
+  header{
+    justify-content: center;
+  }
+  header ul {
+    position: relative;
+    display: grid;
+  }
+  header ul li {
+    margin-bottom: 5px;
+    }
+    .circle2 {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #ffd359;
+      clip-path: circle(85.9% at 50% 0);
+    }
+
+      #videogrande{
+        display: none; 
+      }
+      #cursosrel{
+        display: none;
+      }
 }

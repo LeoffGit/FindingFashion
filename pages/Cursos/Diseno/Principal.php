@@ -33,7 +33,7 @@ $nombrecurso=getnombrecurso($_SESSION['idpagina']);
    <link rel="stylesheet" type="text-css" href="css/bootstrap-social.scss">
    <link rel="stylesheet" href="../../../css/master.css">
 
-   <title>TFG</title>
+   <title><?php echo "$nombrecurso" ?></title>
    <style>
 .ulita {
   -webkit-column-count: 1;
@@ -122,12 +122,12 @@ $nombrecurso=getnombrecurso($_SESSION['idpagina']);
             </div>
           </div>
           <br>
-          <h2>Cursos relacionados</h2>
-          <br>
-          <div class="row">
-            
-          <?php cursosRelacionados($_SESSION['idpagina']);?>
-
+          <div id="cursosrel">
+            <h2>Cursos relacionados</h2>
+            <br>
+            <div class="row">
+            <?php cursosRelacionados($_SESSION['idpagina']);?>
+            </div>
           </div>
         </div>
 

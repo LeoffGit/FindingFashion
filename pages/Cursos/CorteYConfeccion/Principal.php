@@ -33,7 +33,7 @@ $nombrecurso=getnombrecurso($_SESSION['idpagina']);
    <link rel="stylesheet" type="text-css" href="css/bootstrap-social.scss">
    <link rel="stylesheet" href="../../../css/master.css">
 
-   <title>TFG</title>
+   <title><?php echo "$nombrecurso" ?></title>
 <style>
 .ulita {
   -webkit-column-count: 1;
@@ -50,7 +50,7 @@ $nombrecurso=getnombrecurso($_SESSION['idpagina']);
 
     <div class="container-fluid" id="contenido">
       <div class="row">
-        <div class="col-sm-7">
+        <div class="col-md-7">
           <div class="row">
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
               <ol class="carousel-indicators">
@@ -114,19 +114,16 @@ $nombrecurso=getnombrecurso($_SESSION['idpagina']);
             </div>
           </div>
           <br>
-          <h2>Cursos relacionados</h2>
-          <br>
-
-
-          <div class="row">
-          <?php cursosRelacionados($_SESSION['idpagina']);?>
-
+          <div id="cursosrel">
+            <h2>Cursos relacionados</h2>
+            <br>
+            <div class="row">
+            <?php cursosRelacionados($_SESSION['idpagina']);?>
+            </div>
           </div>
-
-
         </div>
-        <div class="col-sm-1"></div>
-        <div class="col-sm-4">
+        <div class="col-md-1"></div>
+        <div class="col-md-4">
           <div class="card sticky-top">
             <img src="../../../images/index/<?php echo "$ruta"?>.jpg" class="card-img-top " alt="foto">
             <p class="textonimage"><?php echo "$nombrecurso"?></p>

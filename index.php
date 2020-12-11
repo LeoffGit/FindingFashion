@@ -12,7 +12,7 @@ if(isset($_POST['logmail'])){
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>AuthForm</title>
+  <title>Finding Fashion</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -39,7 +39,7 @@ if(isset($_POST['logmail'])){
              <a href="FindingFashion/pages/Cursos/Patronaje/Principal.php" onmouseover="imgSlider('http://localhost/FindingFashion/images/index/patronaje.jpg'); changeCircleColor('#FFD359');changeDescription(4)">Patronaje</a>
          </div>
          <div class="imgBox">
-            <img src="http://localhost/FindingFashion/images/index/corteyconfeccion.jpg" class="starbucks" height="250">
+            <img src="http://localhost/FindingFashion/images/index/corteyconfeccion.jpg" class="imagen" height="250">
             <p id="descripcion">Si te apasiona el mundo de la moda el ciclo de Patronaje y moda es el apropiado para tí. Controla todo el proceso creativo para poder confeccionar colecciones, desde el diseño de las prendas.
             </p>
             
@@ -73,7 +73,7 @@ if(isset($_POST['logmail'])){
  </section>
  <script type ="text/javascript">
     function imgSlider(anything){
-        document.querySelector('.starbucks').src= anything;
+        document.querySelector('.imagen').src= anything;
     }
     function changeCircleColor(color){
         const circle = document.querySelector('.circle');

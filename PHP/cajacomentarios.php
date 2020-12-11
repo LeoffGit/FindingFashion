@@ -3,10 +3,10 @@
   <label for="textarea"></label>
   <center>
     <p>
-      <textarea name="comentario" cols="80" rows="5" id="textarea"><?php if(isset($_GET['nombre'])) { ?>@<?php echo $_GET['nombre']; ?><?php } ?> </textarea>
+      <textarea name="comentario" cols="80" rows="5" id="textarea" required><?php if(isset($_GET['nombre'])) { ?>@<?php echo $_GET['nombre']; ?><?php } ?> </textarea>
     </p>
     <p>
-      <input type="submit" id="refrescar" class="boton2" <?php if (isset($_GET['id'])) { ?>name="respuesta" value="respuesta"<?php } else { ?>name="comentar"<?php } ?>value="Comentar">
+      <input type="submit" id="refrescar" class="boton-cards" <?php if (isset($_GET['id'])) { ?>name="respuesta" value="respuesta"<?php } else { ?>name="comentar"<?php } ?>value="Comentar">
     </p>
   </center>
 </form>
@@ -44,16 +44,17 @@
             	<div class="avatar">
                 <img src="/FindingFashion/images/fotosUsuarios/<?php echo $user['foto']; ?>" height="55" width="55">
                 </div>
-                <div class="">
                 	<header>
-                    <a href="#" class="userlink"><?php echo $user['nombre']; ?></a> - <span class="pubdate"><?php echo $row['fecha']; ?></span>
+                    <a href="#" class="userlink avideos"><?php echo $user['nombre']; ?></a>  <span class="pubdate"><?php echo $row['fecha']; ?></span>
                     </header>
-                    <p>
+                    <div class="bodycomentario">
+                    <p class="comentario">
+                      <br>
                     <?php echo $row['comentario']; ?>
                     </p>
                     <span>
 											<?php $actual_link = "$_SERVER[REQUEST_URI]"; $usernom=$user['nombre']; $rowid=$row['idComentarios'] ?>
-                    <a href="<?php echo "$actual_link?nombre="; echo"$usernom&id=$rowid";?>">
+                    <a href="<?php echo "$actual_link?nombre="; echo"$usernom&id=$rowid";?>" class="avideosrespuesta">
                     Responder
                     </a>
                     </span>
@@ -77,11 +78,15 @@
                 </div>
                 	<div class="cmmnt-content">
                         <header>
-                        <a href="#" class="userlink"><?php echo $user2['nombre']; ?></a> - <span class="pubdate"><?php echo $rep['fecha']; ?></span>
+                        
+                        <a href="#" class="userlink avideos"><?php echo $user2['nombre']; ?></a>  <span class="pubdate"><?php echo $rep['fecha']; ?></span>
                         </header>
-                        <p>
+                        <div class="bodycomentario">
+                        <p class="comentario">
+                          <br>
                         <?php echo $rep['comentario']; ?>
                         </p>
+                        </div>
                     </div>
 
                     </li>

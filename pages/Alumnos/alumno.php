@@ -31,50 +31,26 @@ if($_SESSION['tipouser']!=1){
         bottom: 0;
       }
     </style>
-    <title>TFG</title>
+    <title>Finding Fashion</title>
 
 </head>
 
 <body>
+
+<div class="circle3"></div>
+
     <?php headerito(); ?>
-        <div class="container-fluid">
-
-            <h1 class="display-4">Mis cursos</h1>
-            <div class="row">
-                <div class="col-sm-1">&nbsp;</div>
-        <?php
-            $id=$_SESSION['id_usuario'];
-            $conexion = mysqli_connect('localhost', 'root', '', 'academiatfg');
-            mysqli_set_charset($conexion, 'utf8');
-            $consulta="select nombre from curso c, cursos_adquiridos cu where c.idcurso = cu.curso_idcurso and cu.Alumno_Usuarios_idUsuarios ='$id';";
-            $resultado=mysqli_query($conexion,$consulta);
-            if (mysqli_num_rows($resultado)==0) {
-              echo "<h2 style='margin-top:10%;'>Todavía no has adquirido ningún curso</h2>";
-            }
-            while($fila=mysqli_fetch_row($resultado)){?>
-                <div class="col-sm-3">
-                <div class="card" style="width: 18rem;">
-                    <img src="../../images/logo2.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h2><?php echo $fila[0]?></h2>
-                        <h6>Tu progreso</h6>
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar"
-                                style="width: 25%; background-color: rgb(236, 236, 123);color: black;"
-                                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                25%
-                            </div>
-                        </div>
-                        <a href='paginacurso.html<?php echo $fila[0] ?>'>Seguir viendo</a>
-                        <a href="" class="card-link">Inicio</a>
-                    </div>
-                </div>
-            </div>
-           <?php }
-            mysqli_close($conexion);
-          ?>
-
-  <?php footer(); ?>
+    
+    <div class="container-fluid">
+      <div id="contenido" class="cursoalumno">
+        <div class="row">
+          <h2>Tus cursos <?php saludarusuario(); ?></h2>
+        </div>
+        <br><br>
+        <div class="row">
+          <?php cursosUsuario($_SESSION['id_usuario']); ?>
+        </div>
+      </div>
     </div>
   </div>
 

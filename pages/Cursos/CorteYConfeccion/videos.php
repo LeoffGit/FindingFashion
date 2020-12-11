@@ -25,46 +25,16 @@ sesioncurso($url);
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" href="../../../css/font-awesome.css">
   <link rel="stylesheet" href="../../../css/master.css">
-  <title>TFG</title>
-  <style>
-
-      .card {
-        margin-top: 0%;
-        border: 1px solid white;
-        width: 18rem;
-        background-color: black;
-        color: white;
-      }
-      .cajacoment{
-        margin-top:1%;
-        padding:1%;
-        background-color: black;
-        border-radius:1%;
-        color:white;
-        width:95%;
-      }
-    .list-group-item{
-      border: 1px solid white;
-      background-color: black;
-    }
-    a:link{
-      color:rgb(236, 236, 123);
-    }
-    a:hover{
-      color:rgb(236, 236, 123);
-
-    }
-    a:visited{
-      color:grey;
-
-    }
-  </style>
+  <title>Finding Fashion</title>
+  
 
 </head>
 <body>
+<div class="circle2"></div>
+
   <div class="container-fliud">
     <?php headerito(); ?>
-    <div class="row" id="contenido">
+    <div class="row" id="contenidoVideos">
       <div class="col-md-1">
 
       </div>
@@ -81,7 +51,7 @@ sesioncurso($url);
               <div class="card">
                 <div class="card-header" id="headingOne">
                   <h5 class="mb-0">
-                    <button class="btn text-white" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+                    <button class="btn " data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
                       aria-controls="collapseOne" id="trig1">
                       Lección 1
                     </button>
@@ -100,7 +70,7 @@ sesioncurso($url);
               <div class="card">
                 <div class="card-header" id="headingTwo">
                   <h5 class="mb-0">
-                    <button class="btn text-white collapsed" data-toggle="collapse" data-target="#collapseTwo"
+                    <button class="btn  collapsed" data-toggle="collapse" data-target="#collapseTwo"
                       aria-expanded="false" aria-controls="collapseTwo" id="trig2">
                       Lección 2
                     </button>
@@ -118,7 +88,7 @@ sesioncurso($url);
               <div class="card">
                 <div class="card-header" id="headingThree">
                   <h5 class="mb-0">
-                    <button class="btn text-white collapsed" data-toggle="collapse" data-target="#collapseThree"
+                    <button class="btn  collapsed" data-toggle="collapse" data-target="#collapseThree"
                       aria-expanded="false" aria-controls="collapseThree" id="trig3">
                       Lección 3
                     </button>
@@ -136,7 +106,7 @@ sesioncurso($url);
               <div class="card">
                 <div class="card-header" id="headingFour">
                   <h5 class="mb-0">
-                    <button class="btn text-white collapsed" data-toggle="collapse" data-target="#collapseFour"
+                    <button class="btn  collapsed" data-toggle="collapse" data-target="#collapseFour"
                       aria-expanded="false" aria-controls="collapseThree" id="trig4">
                       Lección 4
                     </button>
@@ -164,9 +134,6 @@ sesioncurso($url);
         <?php include "../../../PHP/cajacomentarios.php" ?>
       </div>
     </div>
-
-    <?php footer(); ?>
-
   </div>
 
 

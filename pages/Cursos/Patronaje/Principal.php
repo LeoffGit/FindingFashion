@@ -33,7 +33,7 @@ $nombrecurso=getnombrecurso($_SESSION['idpagina']);
    <link rel="stylesheet" type="text-css" href="css/bootstrap-social.scss">
    <link rel="stylesheet" href="../../../css/master.css">
 
-   <title>TFG</title>
+   <title><?php echo "$nombrecurso" ?></title>
    <style>
   .ulita {
     -webkit-column-count: 1;
@@ -60,13 +60,13 @@ $nombrecurso=getnombrecurso($_SESSION['idpagina']);
               </ol>
               <div class="carousel-inner">
                 <div class="carousel-item active">
-                  <img class="d-block w-100" src="../../../images/cursos/<?php echo $foto; ?>/carrusel1.jpg" alt="First slide">
+                  <img class="d-block w-100 carouselimg" src="../../../images/cursos/<?php echo $foto; ?>/carrusel1.jpg" alt="First slide">
+                </div>
+                <div class="carousel-item ">
+                  <img class="d-block w-100 carouselimg" src="../../../images/cursos/<?php echo $foto; ?>/carrusel2.jpg" alt="Second slide">
                 </div>
                 <div class="carousel-item">
-                  <img class="d-block w-100" src="../../../images/cursos/<?php echo $foto; ?>/carrusel2.jpg" alt="Second slide">
-                </div>
-                <div class="carousel-item">
-                  <img class="d-block w-100" src="../../../images/cursos/<?php echo $foto; ?>/carrusel3.jpg" alt="Third slide">
+                  <img class="d-block w-100 carouselimg" src="../../../images/cursos/<?php echo $foto; ?>/carrusel3.jpg" alt="Third slide">
                 </div>
               </div>
               <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -113,12 +113,12 @@ $nombrecurso=getnombrecurso($_SESSION['idpagina']);
             </div>
           </div>
           <br>
-          <h2>Cursos relacionados</h2>
-          <br>
-          <div class="row">
-            
-          <?php cursosRelacionados($_SESSION['idpagina']);?>
-
+          <<div id="cursosrel">
+            <h2>Cursos relacionados</h2>
+            <br>
+            <div class="row">
+            <?php cursosRelacionados($_SESSION['idpagina']);?>
+            </div>
           </div>
         </div>
         <div class="col-sm-1"></div>
