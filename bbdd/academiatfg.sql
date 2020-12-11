@@ -6,6 +6,8 @@
 -- Tiempo de generación: 11-12-2020 a las 17:40:26
 -- Versión del servidor: 5.7.26
 -- Versión de PHP: 7.2.18
+CREATE DATABASE IF NOT EXISTS academiatfg;
+USE academiatfg;
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
