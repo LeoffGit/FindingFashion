@@ -8,7 +8,10 @@ if(isset($_POST['logmail'])){
 if(isset($_POST['adquirir'])){
   adquirircurso($_SESSION['id_usuario'],$_SESSION['idpagina']);
 }
+
 $foto=getfotocurso($_SESSION['idpagina']);
+$ruta=strtolower($foto);
+$nombrecurso=getnombrecurso($_SESSION['idpagina']);
  ?>
  <!doctype html>
 
@@ -41,10 +44,13 @@ $foto=getfotocurso($_SESSION['idpagina']);
  </head>
 
  <body>
+
+ <div class="circle"></div>
+
    <?php headerito($_SESSION['tipouser']); ?>
-    <div class="container" id="contenido">
+    <div class="container-fluid" id="contenido">
       <div class="row">
-        <div class="col-sm-8">
+        <div class="col-sm-7">
           <div class="row">
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
               <ol class="carousel-indicators">
@@ -75,7 +81,7 @@ $foto=getfotocurso($_SESSION['idpagina']);
             <p></p>
           </div>
           <div class="row">
-            <div class="jumbotron text-white shadow ">
+            <div class="jumbotron">
               <h2 class="display-5">Requisitos</h2>
               <ul class="ulita">
                 <li>No requiere ningun conocimiento previo sobre el mundo textil</li>
@@ -96,13 +102,13 @@ $foto=getfotocurso($_SESSION['idpagina']);
           <div class="row">
             <div class="col-sm-12  ">
               <h2 class="display-5">Contenido del curso</h2>
-              <ul class="list-group  text-white">
-                <li class="list-group-item bg-dark">Video 1 :titulo del video</li>
-                <li class="list-group-item bg-dark">Tarea 1 :nombre de la tarea</li>
-                <li class="list-group-item bg-dark">Video 2 :titulo del video</li>
-                <li class="list-group-item bg-dark">Tarea 2 :nombre de la tarea</li>
-                <li class="list-group-item bg-dark">Video 3 :titulo del video</li>
-                <li class="list-group-item bg-dark">Tarea 3 :nombre de la tarea</li>
+              <ul class="list-group">
+                <li class="list-group-item">Video 1 :titulo del video</li>
+                <li class="list-group-item">Tarea 1 :nombre de la tarea</li>
+                <li class="list-group-item">Video 2 :titulo del video</li>
+                <li class="list-group-item">Tarea 2 :nombre de la tarea</li>
+                <li class="list-group-item">Video 3 :titulo del video</li>
+                <li class="list-group-item">Tarea 3 :nombre de la tarea</li>
               </ul>
             </div>
           </div>
@@ -110,46 +116,16 @@ $foto=getfotocurso($_SESSION['idpagina']);
           <h2>Cursos relacionados</h2>
           <br>
           <div class="row">
-
-            <div class="col-sm-4">
-              <div class="card">
-                <img src="../../../images/logo2.jpg" class="card-img-top" alt="foto">
-                <div class="card-body">
-                  <h5 class="card-title">Modelaje</h5>
-                  <p class="card-text">Aqui iria una breve explicacion de lo que trata el curso y de los contenidos y
-                    aprendizajes que se llevan acabo en el.</p>
-                  <button class="boton-cards">Ir al curso</button>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-4">
-              <div class="card">
-                <img src="../../../images/logo2.jpg" class="card-img-top" alt="foto">
-                <div class="card-body">
-                  <h5 class="card-title">Modelaje</h5>
-                  <p class="card-text">Aqui iria una breve explicacion de lo que trata el curso y de los contenidos y
-                    aprendizajes que se llevan acabo en el.</p>
-                  <button class="boton-cards">Ir al curso</button>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-4">
-              <div class="card">
-                <img src="../../../images/logo2.jpg" class="card-img-top" alt="foto">
-                <div class="card-body">
-                  <h5 class="card-title">Modelaje</h5>
-                  <p class="card-text">Aqui iria una breve explicacion de lo que trata el curso y de los contenidos y
-                    aprendizajes que se llevan acabo en el.</p>
-                  <button class="boton-cards">Ir al curso</button>
-                </div>
-              </div>
-            </div>
+            
+          <?php cursosRelacionados($_SESSION['idpagina']);?>
 
           </div>
         </div>
+        <div class="col-sm-1"></div>
         <div class="col-sm-4">
-          <div class="card shadow sticky-top">
-            <img src="../../../images/cursos/<?php echo $foto; ?>/carrusel2.jpg" class="card-img-top " alt="foto">
+          <div class="card sticky-top">
+          <img src="../../../images/index/<?php echo "$ruta"?>.jpg" class="card-img-top " alt="foto">
+            <p class="textonimage"><?php echo "$nombrecurso"?></p>
             <div class="card-body text-white">
               <form class="" action="" method="post">
                 <?php if(isset($_SESSION['id_usuario'])){ ?>
@@ -179,22 +155,7 @@ $foto=getfotocurso($_SESSION['idpagina']);
       </div>
 
     </div>
-    <div class="botomito" style="background-color: black; color:rgb(97, 96, 96); text-align: center;">
-      &copy;2020-2021 TFG DESARROLLO DE
-      APLICACIONES
-      WEB todos los derechos reservados
-      <div class="rrss">
-        <a class="btn btn-block btn-social btn-twitter">
-          <span class="fa fa-twitter"></span> Siguenos en Twitter
-        </a>
-        <a class="btn btn-block btn-social btn-twitter">
-          <span class="fa fa-facebook"></span> Siguenos en Facebook
-        </a>
-        <a class="btn btn-block btn-social btn-twitter">
-          <span class="fa fa-instagram"></span> Siguenos en instagram
-        </a>
-      </div>
-    </div>
+  
   </div>
 
   <!-- Optional JavaScript -->

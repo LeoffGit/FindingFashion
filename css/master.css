@@ -163,7 +163,16 @@ border: 0;
 }
 #carouselExampleIndicators{
 -webkit-box-shadow: -10px 25px 14px 6px rgba(0, 0, 0, 0.4);
-box-shadow: -10px 25px 14px 6px rgba(0, 0, 0, 0.4);}
+box-shadow: -10px 25px 14px 6px rgba(0, 0, 0, 0.4);
+}
+.carousel-item {
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+  }
+  .carousel-item img {
+  height: 100%;
+  }
 .sticky-top{
   top: 7%;
 }

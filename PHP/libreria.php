@@ -93,6 +93,16 @@ require("funcionconection.php");
       mysqli_close($con);
     }
 
+    function getnombrecurso($idcurso){
+      $con = conexion("academiatfg");
+      $consulta = "select nombre from curso where idcurso = '$idcurso'";
+      $query = mysqli_query($con,$consulta);
+      $row=mysqli_fetch_row($query);
+      $resultado=$row[0];
+      return $resultado;
+      mysqli_close($con);
+    }
+
     function arrayalumno($idalumno){
 
         $con = conexion("academiatfg");
@@ -118,7 +128,7 @@ require("funcionconection.php");
           $_SESSION['idpagina']=2;
             break;
             case '/FindingFashion/pages/Cursos/Diseno/Principal.php':
-            $_SESSION['idpagina']=2;
+            $_SESSION['idpagina']=1;
               break;
             case '/FindingFashion/pages/Cursos/Diseno/videos.php':
             $_SESSION['idpagina']=1;
@@ -158,8 +168,32 @@ require("funcionconection.php");
         $query = mysqli_query($con,"select * from cursos_adquiridos where Alumno_Usuarios_idUsuarios = $idalumno and curso_idcurso = $idcurso");
         if($contar = mysqli_num_rows($query)){
           mysqli_close($con);
-          echo "<button class='boton-cards' name='Comenzar Curso'><a href='videos.php'>Comenzar Curso</a></button>";
+          echo "<a href='videos.php'><button class='boton-cards' name='Comenzar Curso'>Comenzar Curso</button></a>";
         }
       }
+      function cursosRelacionados($idcurso){
+        $con = conexion("academiatfg");
+        $query = mysqli_query($con,"select nombre, foto, descripcion from curso where idcurso != $idcurso");
+          for ($i=0; $i <mysqli_num_rows($query); $i++){
+              $fila=mysqli_fetch_row($query);
+              $ruta="../".$fila[1]."/Principal.php";
+              $foto=strtolower($fila[1]);
+              $nombre=$fila[0];
+              $descripcion=$fila[2];
+                echo"   <div class='col-sm-4'>";
+                echo"   <div class='card'>";
+                echo"     <img src='../../../images/index/$foto.jpg' class='card-img-top' alt='foto'>";
+                echo"     <div class='card-body'>";
+                echo"       <h5 class='card-title'>$nombre</h5>";
+                echo"       <p class='card-text'>$descripcion</p>";
+                echo"       <a href='$ruta'><button class='boton-cards'>Ir al curso</button></a>";
+                echo"     </div>";
+                echo"   </div>";
+                echo" </div>";
+          }
+        
+        mysqli_close($con);
+      }
+      
 
 ?>
