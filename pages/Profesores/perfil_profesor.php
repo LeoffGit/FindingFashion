@@ -2,7 +2,7 @@
 session_start();
 include "../../PHP/libreria.php";
 if($_SESSION['tipouser']!=2){
-  header('location:/TFG/index.php');
+  header('location:/FindingFashion/index.php');
 }
  ?>
  <!doctype html>
@@ -54,12 +54,12 @@ if($_SESSION['tipouser']!=2){
                         ?>
                         <div class="col-sm-3">
                             <div class="card">
-                              <img src="/TFG/images/cursos/<?php echo $fila[1]  ?>/logocurso.jpg" class="card-img-top" alt="">
+                              <img src="/FindingFashion/images/cursos/<?php echo $fila[1]  ?>/logocurso.jpg" class="card-img-top" alt="">
 
                                 <div class="card-body">
                                         <h5 class="card-title"><?php echo $fila[0] ?></h5>
                                         <p class="card-text"><?php echo $fila[2]; ?></p>
-                                    <button class="boton-cards"><a href="/TFG/pages/Cursos/<?php echo $fila[1]; ?>/Principal.php">Ir al curso</a></button>
+                                    <button class="boton-cards"><a href="/FindingFashion/pages/Cursos/<?php echo $fila[1]; ?>/Principal.php">Ir al curso</a></button>
                                 </div>
                             </div>
                         </div>

@@ -42,7 +42,7 @@
 
         	<li class=" list-group-item">
             	<div class="avatar">
-                <img src="/TFG/images/fotosUsuarios/<?php echo $user['foto']; ?>" height="55" width="55">
+                <img src="/FindingFashion/images/fotosUsuarios/<?php echo $user['foto']; ?>" height="55" width="55">
                 </div>
                 <div class="">
                 	<header>
@@ -73,7 +73,7 @@
                 <ul class="list-group">
                 	<li class="list-group-item">
                     	<div class="avatar">
-												<img src="/TFG/images/fotosUsuarios/<?php echo $user2['foto']; ?>" height="55" width="55">
+												<img src="/FindingFashion/images/fotosUsuarios/<?php echo $user2['foto']; ?>" height="55" width="55">
                 </div>
                 	<div class="cmmnt-content">
                         <header>

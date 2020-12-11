@@ -156,7 +156,7 @@ $foto=getfotocurso($_SESSION['idpagina']);
               <button type="submit" class="boton-cards" name="adquirir"><?php $esto=checkCurso($_SESSION['id_usuario'],$_SESSION['idpagina']); echo $esto; ?></button>
               <?php linkvid($_SESSION['id_usuario'],$_SESSION['idpagina']); ?>
               <?php } else{
-                echo "<a href='/TFG/pages/formulario.html'><button type='button' class='boton-cards' name='adquirir'>Registrate para adquirir el curso</button></a>";
+                echo "<a href='/FindingFashion/pages/formulario.html'><button type='button' class='boton-cards' name='adquirir'>Registrate para adquirir el curso</button></a>";
               }
                 ?>
               </form>

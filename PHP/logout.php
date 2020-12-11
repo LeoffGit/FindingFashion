@@ -2,5 +2,5 @@
 session_start();
 session_destroy();
 $_SESSION['tipouser']=0;
-header('Location:/TFG/index.php');
+header('Location:/FindingFashion/index.php');
  ?>

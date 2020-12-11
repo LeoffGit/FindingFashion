@@ -33,13 +33,13 @@ if(isset($_POST['logmail'])){
          <div class="textBox">
              <h2> No es solo moda es <br> <span>Finding Fashion</span></h2>
              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras varius urna a orci rutrum elementum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nunc ex leo, aliquet eget quam in, congue commodo ante. Praesent ut interdum justo. Praesent ultricies elementum eros, eget luctus erat tempus quis. Sed ante sem, commodo vel lorem id, aliquam interdum ex. Mauris aliquet quis tellus id scelerisque. Nullam in sem sit amet purus lacinia suscipit a vitae nisi. Quisque ornare augue ut nisl venenatis gravida.</p>
-             <a href="TFG/pages/Cursos/CorteYConfeccion/Principal.php" onmouseover="imgSlider('http://localhost/TFG/images/index/corteyconfeccion.jpg'); changeCircleColor('#FFD359');changeDescription(1)">Corte y confección</a>
-             <a href="#" onmouseover="imgSlider('http://localhost/TFG/images/index/diseno.jpg'); changeCircleColor('#FFDC7D');changeDescription(2)">Diseño</a>
-             <a href="#" onmouseover="imgSlider('http://localhost/TFG/images/index/modelaje.jpg'); changeCircleColor('#F9C537');changeDescription(3)">Modelaje</a>
-             <a href="#" onmouseover="imgSlider('http://localhost/TFG/images/index/patronaje.jpg'); changeCircleColor('#FFD359');changeDescription(4)">Patronaje</a>
+             <a href="FindingFashion/pages/Cursos/CorteYConfeccion/Principal.php" onmouseover="imgSlider('http://localhost/FindingFashion/images/index/corteyconfeccion.jpg'); changeCircleColor('#FFD359');changeDescription(1)">Corte y confección</a>
+             <a href="#" onmouseover="imgSlider('http://localhost/FindingFashion/images/index/diseno.jpg'); changeCircleColor('#FFDC7D');changeDescription(2)">Diseño</a>
+             <a href="#" onmouseover="imgSlider('http://localhost/FindingFashion/images/index/modelaje.jpg'); changeCircleColor('#F9C537');changeDescription(3)">Modelaje</a>
+             <a href="#" onmouseover="imgSlider('http://localhost/FindingFashion/images/index/patronaje.jpg'); changeCircleColor('#FFD359');changeDescription(4)">Patronaje</a>
          </div>
          <div class="imgBox">
-            <img src="http://localhost/TFG/images/index/corteyconfeccion.jpg" class="starbucks" height="250">
+            <img src="http://localhost/FindingFashion/images/index/corteyconfeccion.jpg" class="starbucks" height="250">
             <p id="descripcion">Si te apasiona el mundo de la moda el ciclo de Patronaje y moda es el apropiado para tí. Controla todo el proceso creativo para poder confeccionar colecciones, desde el diseño de las prendas.
             </p>
             

@@ -1,10 +1,10 @@
 <header>
-         <a href="/TFG/index.php"><img src="http://localhost/TFG/images/logoempresa.png"  class="logo"></a>
+         <a href="/FindingFashion/index.php"><img src="http://localhost/FindingFashion/images/logoempresa.png"  class="logo"></a>
             <ul>
-                <li><a href="/TFG/index.php">Home</a></li>
-                <li><a href="/TFG/pages/Alumnos/alumno.php">Tu perfil <?php saludarusuario(); ?></a></li>
+                <li><a href="/FindingFashion/index.php">Home</a></li>
+                <li><a href="/FindingFashion/pages/Alumnos/alumno.php">Tu perfil <?php saludarusuario(); ?></a></li>
                 <li>
-                    <form class="" action="/TFG/PHP/logout.php" method="get">
+                    <form class="" action="/FindingFashion/PHP/logout.php" method="get">
                         <button class="headerbtn " type="submit" name="logout"  value="yes">Log out</button>
                     </form>
                 </li>

@@ -17,8 +17,11 @@ require("funcionconection.php");
                     $contar2 = mysqli_num_rows($query2);
                         if ($contar2 == 0){
                             $_SESSION['tipouser']=2;
+                            echo "tipouser2";
                         }else{
                             $_SESSION['tipouser']=1;
+                            echo "tipouser1";
+
                         }
                     }
             }
@@ -32,7 +35,7 @@ require("funcionconection.php");
         echo "$usuario";
     }
     function raizdocumento(){
-      echo "http://localhost/TFG";
+      echo "http://localhost/FindingFashion";
     }
 
     /*las rutas de los header estan en raiz
@@ -45,19 +48,19 @@ require("funcionconection.php");
       }
         switch ($_SESSION['tipouser']) {
             case '1':
-                include "$documento/TFG/cabeceras/header2alumno.php";
+                include "$documento/FindingFashion/cabeceras/header2alumno.php";
                 break;
             case '2':
-                include "$documento/TFG/cabeceras/header2profesor.php";
+                include "$documento/FindingFashion/cabeceras/header2profesor.php";
                 break;
             default:
-                include "$documento/TFG/cabeceras/header2.php";
+                include "$documento/FindingFashion/cabeceras/header2.php";
            }
     }
 
     function footer(){
       $documento= $_SERVER['DOCUMENT_ROOT'];
-                include "$documento/TFG/Footer/footer.html";
+                include "$documento/FindingFashion/Footer/footer.html";
 
     }
 
@@ -108,28 +111,28 @@ require("funcionconection.php");
     }
     function sesioncurso($variableURI){
       switch ($variableURI) {
-        case '/TFG/pages/Cursos/Patronaje/Principal.php':
+        case '/FindingFashion/pages/Cursos/Patronaje/Principal.php':
         $_SESSION['idpagina']=2;
           break;
-          case '/TFG/pages/Cursos/Patronaje/videos.php':
+          case '/FindingFashion/pages/Cursos/Patronaje/videos.php':
           $_SESSION['idpagina']=2;
             break;
-            case '/TFG/pages/Cursos/Diseno/Principal.php':
+            case '/FindingFashion/pages/Cursos/Diseno/Principal.php':
             $_SESSION['idpagina']=2;
               break;
-            case '/TFG/pages/Cursos/Diseno/videos.php':
+            case '/FindingFashion/pages/Cursos/Diseno/videos.php':
             $_SESSION['idpagina']=1;
               break;
-              case '/TFG/pages/Cursos/Modelaje/Principal.php':
+              case '/FindingFashion/pages/Cursos/Modelaje/Principal.php':
               $_SESSION['idpagina']=3;
                 break;
-              case '/TFG/pages/Cursos/Modelaje/videos.php':
+              case '/FindingFashion/pages/Cursos/Modelaje/videos.php':
               $_SESSION['idpagina']=3;
                 break;
-                case '/TFG/pages/Cursos/CorteYConfeccion/Principal.php':
+                case '/FindingFashion/pages/Cursos/CorteYConfeccion/Principal.php':
                 $_SESSION['idpagina']=4;
                   break;
-                case '/TFG/pages/Cursos/CorteYConfeccion/videos.php':
+                case '/FindingFashion/pages/Cursos/CorteYConfeccion/videos.php':
                 $_SESSION['idpagina']=4;
                   break;
           default:
