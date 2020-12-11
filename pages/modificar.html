@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="../css/stylelogin.css" />
+    <title>Finding Fashion</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="forms-container">
+        <div class="signin-signup">
+          <form action="../PHP/modificar-datos.php" class="sign-in-form" method="POST">
+            <button class="btn solid"><a href="../index.php">Retroceder</a></button>
+            <h2 class="title">Modifica tus datos</h2>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input type="text" placeholder=" Nombre de usuario" name="nombre"/>
+            </div>
+            <div class="input-field">
+              <i class="fas fa-eye" onmousedown="mouseDown('pass1')" onmouseup="mouseUp('pass1')"></i>
+              <input type="password" placeholder="Contraseña" id="pass1" name="contrasena" required/>
+            </div>
+            <input type="submit" value="Modificar" class="btn solid" />
+            </form>
+         </div>
+        </div>
+    </div>
+ </body>
+ <script>
+    function mouseDown(id) {
+document.getElementById(id).type ='text';
+}
+
+function mouseUp(id) {
+document.getElementById(id).type ='password';
+}
+  </script>
+</html>

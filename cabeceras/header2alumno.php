@@ -8,6 +8,6 @@
                         <button class="headerbtn " type="submit" name="logout"  value="yes">Log out</button>
                     </form>
                 </li>
-                <li><a href="#">Contacto</a></li>
+                <li><a href="/FindingFashion/pages/modificar.html">Modifica tu perfil</a></li>
             </ul>
      </header>

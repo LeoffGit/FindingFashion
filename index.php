@@ -32,7 +32,8 @@ if(isset($_POST['logmail'])){
      <div class="content">
          <div class="textBox">
              <h2> No es solo moda es <br> <span>Finding Fashion</span></h2>
-             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras varius urna a orci rutrum elementum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nunc ex leo, aliquet eget quam in, congue commodo ante. Praesent ut interdum justo. Praesent ultricies elementum eros, eget luctus erat tempus quis. Sed ante sem, commodo vel lorem id, aliquam interdum ex. Mauris aliquet quis tellus id scelerisque. Nullam in sem sit amet purus lacinia suscipit a vitae nisi. Quisque ornare augue ut nisl venenatis gravida.</p>
+             <p>El diseño de moda incluye todo tipo de especialidades. Para trabajar en el mundo de la moda es necesario un conocimiento práctico y técnico completo, nuestros cursos de diseño de moda incluyen cursos generales y temario específico, para que puedas aprender patronaje industrial, estilismo, diseño, troqueles para tela y mucho más.
+                En nuestra escuela de diseño de moda impartimos cursos específicos de moda y complementos, diferentes tipos de patronaje y confección, en los que además repasamos a fondo la historia de la moda y los diseños que han marcado la historia de la alta costura.</p>
              <a href="FindingFashion/pages/Cursos/CorteYConfeccion/Principal.php" onmouseover="imgSlider('http://localhost/FindingFashion/images/index/corteyconfeccion.jpg'); changeCircleColor('#FFD359');changeDescription(1)">Corte y confección</a>
              <a href="FindingFashion/pages/Cursos/Diseno/Principal.php" onmouseover="imgSlider('http://localhost/FindingFashion/images/index/diseno.jpg'); changeCircleColor('#FFDC7D');changeDescription(2)">Diseño</a>
              <a href="FindingFashion/pages/Cursos/Modelaje/Principal.php" onmouseover="imgSlider('http://localhost/FindingFashion/images/index/modelaje.jpg'); changeCircleColor('#F9C537');changeDescription(3)">Modelaje</a>
@@ -40,7 +41,7 @@ if(isset($_POST['logmail'])){
          </div>
          <div class="imgBox">
             <img src="http://localhost/FindingFashion/images/index/corteyconfeccion.jpg" class="imagen" height="250">
-            <p id="descripcion">Si te apasiona el mundo de la moda el ciclo de Patronaje y moda es el apropiado para tí. Controla todo el proceso creativo para poder confeccionar colecciones, desde el diseño de las prendas.
+            <p id="descripcion">Dentro de la parte de confección, manejarás las diferentes técnicas de puntadas a mano y a máquina y aprenderás los diferentes métodos de corte y colocación del patrón sobre el tejido.
             </p>
             
          </div>
@@ -85,7 +86,7 @@ if(isset($_POST['logmail'])){
             case 1:
             
                 document.getElementById("descripcion").classList.add("fade");
-                document.getElementById("descripcion").innerHTML="En este curso aprenderás las características de cada uno de los elementos básicos del diseño de modas mas utilizados en la creacion de prendas. Podrás descubrir temas de inspiracion para diseñar ropa de manera exitosa! Los elementos que conoceras son parte integral de todo tipo de diseño incluyendo prendas y textiles. Los elementos que verás en el curso son: 1.Línea 2.Silueta 3.Color 4.Forma 5.Textura Tambien conocerás el Proceso Creativo de Diseño para ir paso a paso y lograr buenas propuestas. Conocerás como se diseña un Moodboard o Tabla de Inspiración para diseñar. Veras en cada uno de ellos ejemplos en estampados, ropa y accesorios. Si te gusta la Moda este curso podra inspirarte a crear diseños innovadores! " ;
+                document.getElementById("descripcion").innerHTML="Dentro de la parte de confección, manejarás las diferentes técnicas de puntadas a mano y a máquina y aprenderás los diferentes métodos de corte y colocación del patrón sobre el tejido.";
                 setTimeout(() => { document.getElementById("descripcion").classList.remove("fade"); }, 500);
                 
 
@@ -94,7 +95,7 @@ if(isset($_POST['logmail'])){
             case 2:
             
             document.getElementById("descripcion").classList.add("fade");
-            document.getElementById("descripcion").innerHTML= "texto2 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras varius urna a orci rutrum elementum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nunc ex leo, aliquet eget quam in, congue commodo ante. Praesent ut interdum justo. Praesent ultricies elementum eros, eget luctus erat tempus quis. Sed ante sem, commodo vel lorem id, aliquam interdum ex. Mauris aliquet quis tellus id scelerisque. Nullam in sem sit amet purus lacinia suscipit a vitae nisi. Quisque ornare augue ut nisl venenatis gravida." ;
+            document.getElementById("descripcion").innerHTML= "El curso de Diseño de Moda sigue un hilo conductor progresivo a partir del concepto “diseño”, que permitirá aprender a seleccionar y trabajar el tejido más adecuado para cada diseño." ;
             setTimeout(() => { document.getElementById("descripcion").classList.remove("fade"); }, 500);
             
 
@@ -103,21 +104,21 @@ if(isset($_POST['logmail'])){
             case 3:
             
             document.getElementById("descripcion").classList.add("fade");
-            document.getElementById("descripcion").innerHTML= "texto tresito Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras varius urna a orci rutrum elementum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nunc ex leo, aliquet eget quam in, congue commodo ante. Praesent ut interdum justo. Praesent ultricies elementum eros, eget luctus erat tempus quis. Sed ante sem, commodo vel lorem id, aliquam interdum ex. Mauris aliquet quis tellus id scelerisque. Nullam in sem sit amet purus lacinia suscipit a vitae nisi. Quisque ornare augue ut nisl venenatis gravida." ;
+            document.getElementById("descripcion").innerHTML= "El modelaje (o moulage) es una técnica de diseño de moda que permite construir la prenda directamente sobre el cuerpo de la persona o sobre un maniquí para posteriormente obtener un patrón." ;
             setTimeout(() => { document.getElementById("descripcion").classList.remove("fade"); }, 500);
             break;
 
             case 4:
             
             document.getElementById("descripcion").classList.add("fade");
-            document.getElementById("descripcion").innerHTML= "texto 4 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras varius urna a orci rutrum elementum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nunc ex leo, aliquet eget quam in, congue commodo ante. Praesent ut interdum justo. Praesent ultricies elementum eros, eget luctus erat tempus quis. Sed ante sem, commodo vel lorem id, aliquam interdum ex. Mauris aliquet quis tellus id scelerisque. Nullam in sem sit amet purus lacinia suscipit a vitae nisi. Quisque ornare augue ut nisl venenatis gravida." ;
+            document.getElementById("descripcion").innerHTML= "Si te apasiona el mundo de la moda el ciclo de Patronaje y moda es el apropiado para tí. Controla todo el proceso creativo para poder confeccionar colecciones, desde el diseño de las prendas." ;
             setTimeout(() => { document.getElementById("descripcion").classList.remove("fade"); }, 500);
             break;                
 
             default:
             
             document.getElementById("descripcion").classList.add("fade");
-            document.getElementById("descripcion").innerHTML= "default Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras varius urna a orci rutrum elementum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nunc ex leo, aliquet eget quam in, congue commodo ante. Praesent ut interdum justo. Praesent ultricies elementum eros, eget luctus erat tempus quis. Sed ante sem, commodo vel lorem id, aliquam interdum ex. Mauris aliquet quis tellus id scelerisque. Nullam in sem sit amet purus lacinia suscipit a vitae nisi. Quisque ornare augue ut nisl venenatis gravida." ;
+            document.getElementById("descripcion").innerHTML= "Dentro de la parte de confección, manejarás las diferentes técnicas de puntadas a mano y a máquina y aprenderás los diferentes métodos de corte y colocación del patrón sobre el tejido." ;
             setTimeout(() => { document.getElementById("descripcion").classList.remove("fade"); }, 500);
             break;
         }
