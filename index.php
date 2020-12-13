@@ -34,10 +34,12 @@ if(isset($_POST['logmail'])){
              <h2> No es solo moda es <br> <span>Finding Fashion</span></h2>
              <p>El diseño de moda incluye todo tipo de especialidades. Para trabajar en el mundo de la moda es necesario un conocimiento práctico y técnico completo, nuestros cursos de diseño de moda incluyen cursos generales y temario específico, para que puedas aprender patronaje industrial, estilismo, diseño, troqueles para tela y mucho más.
                 En nuestra escuela de diseño de moda impartimos cursos específicos de moda y complementos, diferentes tipos de patronaje y confección, en los que además repasamos a fondo la historia de la moda y los diseños que han marcado la historia de la alta costura.</p>
+            <div class="links">
              <a href="FindingFashion/pages/Cursos/CorteYConfeccion/Principal.php" onmouseover="imgSlider('http://localhost/FindingFashion/images/index/corteyconfeccion.jpg'); changeCircleColor('#FFD359');changeDescription(1)">Corte y confección</a>
              <a href="FindingFashion/pages/Cursos/Diseno/Principal.php" onmouseover="imgSlider('http://localhost/FindingFashion/images/index/diseno.jpg'); changeCircleColor('#FFDC7D');changeDescription(2)">Diseño</a>
              <a href="FindingFashion/pages/Cursos/Modelaje/Principal.php" onmouseover="imgSlider('http://localhost/FindingFashion/images/index/modelaje.jpg'); changeCircleColor('#F9C537');changeDescription(3)">Modelaje</a>
              <a href="FindingFashion/pages/Cursos/Patronaje/Principal.php" onmouseover="imgSlider('http://localhost/FindingFashion/images/index/patronaje.jpg'); changeCircleColor('#FFD359');changeDescription(4)">Patronaje</a>
+             </div>
          </div>
          <div class="imgBox">
             <img src="http://localhost/FindingFashion/images/index/corteyconfeccion.jpg" class="imagen" height="250">

@@ -181,11 +181,19 @@ header ul li a {
   opacity: 0;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 500px) {
   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+  }
+  .links{
+    transform: translateY(275px);
+    display:grid ;
+ 
+  }
+  .links a{
+    margin-right: 50px;
   }
   section {
     position: relative;
@@ -198,22 +206,19 @@ header ul li a {
     background: #fff;
 }
   .circle {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 216%;
-    height: 137%;
+    position: fixed;
     background: #ffd359;
     clip-path: circle(800px at right 900px);
 }
 header {
   position: absolute;
-  top: 7px;
-  left: -20px; 
   width: 100%;
   padding: 20px 80px;
   flex-direction: column;
  
+}
+header ul {
+  margin-right: 50px;
 }
 .content {
   position: relative;
@@ -227,12 +232,12 @@ header {
     font-size: 1.5em;
     line-height: 0.85em;
     font-weight: 500;
-    visibility: hidden;
+    display: none;
 }
 .content .textBox p {
   color: #333;
   font-family: "Poppins", sans-serif;
-  visibility: hidden;
+  display: none;
 }
 .content .imgBox {
   width: 340px;
