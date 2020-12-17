@@ -200,30 +200,35 @@ require("funcionconection.php");
       function cursosUsuario($idusuario){
         $con = conexion("academiatfg");
         $query1 = mysqli_query($con,"select curso_idcurso from cursos_adquiridos where Alumno_Usuarios_idUsuarios = $idusuario");
-        for ($i=0; $i <mysqli_num_rows($query1); $i++){
-          $fila=mysqli_fetch_row($query1);
-          $cursos[$i]=$fila[0];
-        }
-        for ($i=0; $i <count($cursos) ; $i++) { 
-          $idcurso=$cursos[$i];
-        $query2 = mysqli_query($con,"select nombre, foto, descripcion from curso where idcurso = $idcurso");
-          for ($j=0; $j <mysqli_num_rows($query2); $j++){
-              $fila=mysqli_fetch_row($query2);
-              $ruta="../Cursos/".$fila[1]."/Principal.php";
-              $foto=strtolower($fila[1]);
-              $nombre=$fila[0];
-              $descripcion=$fila[2];
-                echo"   <div class='col-lg-3'>";
-                echo"   <div class='card'>";
-                echo"     <img src='../../images/index/$foto.jpg' class='card-img-top' alt='foto'>";
-                echo"     <div class='card-body'>";
-                echo"       <h5 class='card-title'>$nombre</h5>";
-                echo"       <p class='card-text'>$descripcion</p>";
-                echo"       <a href='$ruta'><button class='boton-cards'>Ir al curso</button></a>";
-                echo"     </div>";
-                echo"   </div>";
-                echo" </div>";
+        if($query1){
+          for ($i=0; $i <mysqli_num_rows($query1); $i++){
+            $fila=mysqli_fetch_row($query1);
+            $cursos[$i]=$fila[0];
           }
+          for ($i=0; $i <count($cursos) ; $i++) { 
+            $idcurso=$cursos[$i];
+          $query2 = mysqli_query($con,"select nombre, foto, descripcion from curso where idcurso = $idcurso");
+            for ($j=0; $j <mysqli_num_rows($query2); $j++){
+                $fila=mysqli_fetch_row($query2);
+                $ruta="../Cursos/".$fila[1]."/Principal.php";
+                $foto=strtolower($fila[1]);
+                $nombre=$fila[0];
+                $descripcion=$fila[2];
+                  echo"   <div class='col-lg-3'>";
+                  echo"   <div class='card'>";
+                  echo"     <img src='../../images/index/$foto.jpg' class='card-img-top' alt='foto'>";
+                  echo"     <div class='card-body'>";
+                  echo"       <h5 class='card-title'>$nombre</h5>";
+                  echo"       <p class='card-text'>$descripcion</p>";
+                  echo"       <a href='$ruta'><button class='boton-cards'>Ir al curso</button></a>";
+                  echo"     </div>";
+                  echo"   </div>";
+                  echo" </div>";
+            }
+          }
+
+
+
         }
         mysqli_close($con);
       }

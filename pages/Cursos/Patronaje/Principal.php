@@ -132,21 +132,18 @@ $nombrecurso=getnombrecurso($_SESSION['idpagina']);
               <button type="submit" class="boton-cards" name="adquirir"><?php $esto=checkCurso($_SESSION['id_usuario'],$_SESSION['idpagina']); echo $esto; ?></button>
               <?php linkvid($_SESSION['id_usuario'],$_SESSION['idpagina']); ?>
               <?php } else{
-                echo "<a href='/FindingFashion/pages/formulario.html'><button type='button' class='boton-cards' name='adquirir'>Registrate para adquirir el curso</button></a>";
+                echo "<a href='/FindingFashion/pages/login.html'><button type='button' class='boton-cards' name='adquirir'>Registrate para adquirir el curso</button></a>";
               }
                 ?>
               </form>
               <br><br>
               <p class="card-text">Este curso contiene :</p>
-
               <ul class="list-group text-dark">
                 <li class="list-group-item">4,5 horas de videos</li>
                 <li class="list-group-item">5 videos</li>
                 <li class="list-group-item">Acceso de por vida</li>
                 <li class="list-group-item">Certificado de finalización</li>
               </ul>
-
-
             </div>
           </div>
         </div>
